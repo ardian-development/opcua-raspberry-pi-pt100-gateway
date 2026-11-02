@@ -1,0 +1,20 @@
+{
+  "sensors": [
+    {
+      "name": "Pt100Channel0",
+      "multiplexer_channel": 0,
+      "i2c_address": 72,
+      "temperature_register": 16,
+      "sensor_id_register": 32,
+      "sensor_id_length": 16
+    },
+    {
+      "name": "Pt100Channel1",
+      "multiplexer_channel": 1,
+      "i2c_address": 72,
+      "temperature_register": 16,
+      "sensor_id_register": 32,
+      "sensor_id_length": 16
+    }
+  ]
+}

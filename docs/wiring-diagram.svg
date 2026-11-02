@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title description">
+  <title id="title">Conceptual Raspberry Pi PT100 OPC UA gateway wiring</title>
+  <desc id="description">A Raspberry Pi connects through an I2C bus to a PCA9548A-compatible multiplexer, with two generic PT100 bridge channels. The Raspberry Pi publishes temperatures and sensor IDs through OPC UA.</desc>
+  <style>
+    .box { fill: #f8fafc; stroke: #0f766e; stroke-width: 3; rx: 14; }
+    .sensor { fill: #eff6ff; stroke: #2563eb; stroke-width: 3; rx: 14; }
+    .label { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+    .small { font-family: Arial, sans-serif; font-size: 17px; fill: #334155; }
+    .wire { stroke: #0f766e; stroke-width: 4; fill: none; }
+    .signal { stroke: #7c3aed; stroke-width: 4; fill: none; stroke-dasharray: 10 8; }
+  </style>
+  <rect x="50" y="180" width="220" height="140" class="box"/>
+  <text x="160" y="228" text-anchor="middle" class="label">Raspberry Pi</text>
+  <text x="160" y="258" text-anchor="middle" class="small">Python gateway</text>
+  <text x="160" y="284" text-anchor="middle" class="small">Linux / I²C bus</text>
+
+  <rect x="390" y="180" width="230" height="140" class="box"/>
+  <text x="505" y="224" text-anchor="middle" class="label">I²C multiplexer</text>
+  <text x="505" y="254" text-anchor="middle" class="small">PCA9548A-compatible</text>
+  <text x="505" y="280" text-anchor="middle" class="small">one selected channel</text>
+
+  <rect x="750" y="75" width="200" height="115" class="sensor"/>
+  <text x="850" y="120" text-anchor="middle" class="label">PT100 bridge A</text>
+  <text x="850" y="150" text-anchor="middle" class="small">temperature + sensor ID</text>
+
+  <rect x="750" y="310" width="200" height="115" class="sensor"/>
+  <text x="850" y="355" text-anchor="middle" class="label">PT100 bridge B</text>
+  <text x="850" y="385" text-anchor="middle" class="small">temperature + sensor ID</text>
+
+  <path d="M270 250 H390" class="wire"/>
+  <text x="330" y="235" text-anchor="middle" class="small">SDA / SCL</text>
+  <path d="M620 220 H680 V132 H750" class="wire"/>
+  <text x="680" y="116" text-anchor="middle" class="small">channel 0</text>
+  <path d="M620 280 H680 V367 H750" class="wire"/>
+  <text x="680" y="414" text-anchor="middle" class="small">channel 1</text>
+  <path d="M160 180 V85 H505" class="signal"/>
+  <text x="332" y="68" text-anchor="middle" class="small">OPC UA telemetry published by the gateway</text>
+  <text x="500" y="475" text-anchor="middle" class="small">Conceptual demo wiring — verify voltage levels and pin assignments for your own hardware.</text>
+</svg>
